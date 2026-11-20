@@ -87,4 +87,4 @@ This is an unofficial community research project and is not affiliated with Moto
 
 Research notes, reproducible logs, source references, and reviewed device-specific fixes are welcome. Open an issue before submitting large or unverified changes.
 
-See [docs/compatibility.md](docs/compatibility.md), [docs/bring-up-plan.md](docs/bring-up-plan.md), and [docs/references.md](docs/references.md).
+See [docs/compatibility.md](docs/compatibility.md), [docs/bring-up-plan.md](docs/bring-up-plan.md), [docs/device-target.md](docs/device-target.md), [docs/source-audit.md](docs/source-audit.md), and [docs/references.md](docs/references.md).
