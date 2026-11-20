@@ -27,3 +27,7 @@ These public repositories and release pages are starting points for research, no
 - Do not copy code without checking its license and preserving required notices.
 - Do not redistribute proprietary vendor files or firmware without permission.
 - Record the exact upstream URL, branch, commit, and license for any source adopted by this project.
+
+## Hanoip source audit
+
+- [Source audit: hanoip reference tree](source-audit.md) — inspected upstream build files and recorded firmware provenance gaps.
