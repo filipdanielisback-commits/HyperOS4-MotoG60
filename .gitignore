@@ -1,0 +1,34 @@
+# Android / Soong / Make build output
+/out/
+/build/
+/.cache/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Local machine configuration
+local.properties
+.env
+*.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Downloaded build artifacts and private working data
+# Do not ignore source-controlled scripts, configs, or documented test assets.
+artifacts/
+downloads/
