@@ -2,9 +2,9 @@
 
 > Experimental research project exploring whether genuine Xiaomi HyperOS 4 components can be adapted to the Motorola Moto G60 (**hanoip**).
 
-**Status: source research and bring-up planning. No bootable build is available yet.**
+**Status: initial device-tree product skeleton committed; not yet buildable. No bootable build is available.**
 
-This repository documents device research, compatibility work, build-system experiments, and verified test results. It does not currently contain a ROM, recovery installer, or boot image.
+This repository documents device research, compatibility work, build-system experiments, and verified test results. It does not contain a ROM, recovery installer, or boot image.
 
 ## Device target
 
@@ -16,10 +16,21 @@ This repository documents device research, compatibility work, build-system expe
 | RAM | 6 GB |
 | Firmware baseline | S2RIS32.32-20-9-9-2-3 |
 | Firmware Android version | Android 12 (firmware source baseline) |
+| Port Android target | Android 16 (selected project target; donor build still to be verified) |
 | SoC | Qualcomm Snapdragon 732G (SM7150 family) |
 | GPU | Qualcomm Adreno 618 |
 
 See [docs/device-target.md](docs/device-target.md) for evidence, source references, and open verification items.
+
+## Current source-tree progress
+
+Initial product-registration files are present in `device/motorola/hanoip/`:
+
+- `AndroidProducts.mk` — registers the experimental product and lunch targets.
+- `hyper_hanoip.mk` — declares the product identity.
+- `device.mk` — intentionally minimal device product makefile.
+
+These files are scaffolding only. They do not constitute a complete Android device tree and do not make the project buildable.
 
 ## Compatibility tracker
 
@@ -57,13 +68,17 @@ Neither method is available yet. Do not attempt installation until a maintainer 
 ├── README.md
 ├── .gitignore
 ├── device/motorola/hanoip/
+│   ├── AndroidProducts.mk
+│   ├── device.mk
+│   └── hyper_hanoip.mk
 ├── kernel/motorola/sm6150/
 ├── vendor/motorola/hanoip/
 └── docs/
     ├── bring-up-plan.md
     ├── compatibility.md
     ├── device-target.md
-    └── references.md
+    ├── references.md
+    └── source-audit.md
 ```
 
 ## Development principles
