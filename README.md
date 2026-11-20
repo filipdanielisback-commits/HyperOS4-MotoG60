@@ -2,7 +2,7 @@
 
 > Experimental research project exploring whether genuine Xiaomi HyperOS 4 components can be adapted to the Motorola Moto G60 (**hanoip**).
 
-**Status: planning and bring-up research. No bootable build is available yet.**
+**Status: source research and bring-up planning. No bootable build is available yet.**
 
 This repository documents device research, compatibility work, build-system experiments, and verified test results. It does not currently contain a ROM, recovery installer, or boot image.
 
@@ -11,12 +11,15 @@ This repository documents device research, compatibility work, build-system expe
 | Item | Target |
 |---|---|
 | Device | Motorola Moto G60 |
+| Model | XT2135-2 |
 | Device codename | hanoip |
+| RAM | 6 GB |
+| Firmware baseline | S2RIS32.32-20-9-9-2-3 |
+| Firmware Android version | Android 12 (firmware source baseline) |
 | SoC | Qualcomm Snapdragon 732G (SM7150 family) |
 | GPU | Qualcomm Adreno 618 |
-| Port target | Genuine Xiaomi HyperOS 4 components, subject to source and redistribution permissions |
 
-Verify the exact device variant, firmware base, partition layout, and hardware details against trusted device sources before using them in a build.
+See [docs/device-target.md](docs/device-target.md) for evidence, source references, and open verification items.
 
 ## Compatibility tracker
 
@@ -34,7 +37,7 @@ Statuses are conservative. A component is not marked working until it has been t
 | Modem / telephony | Not tested | No port build |
 | Storage | Not tested | No port build |
 | Touch / input | Not tested | No port build |
-| Bluetooth | Deferred | Explicitly excluded from the initial target |
+| Bluetooth | Deferred | Excluded from the initial target |
 
 “Not tested” does not mean working. No compatibility claim is made before testing.
 
@@ -53,12 +56,13 @@ Neither method is available yet. Do not attempt installation until a maintainer 
 .
 ├── README.md
 ├── .gitignore
-├── device/motorola/hanoip/README.md
-├── kernel/motorola/sm6150/README.md
-├── vendor/motorola/hanoip/README.md
+├── device/motorola/hanoip/
+├── kernel/motorola/sm6150/
+├── vendor/motorola/hanoip/
 └── docs/
     ├── bring-up-plan.md
     ├── compatibility.md
+    ├── device-target.md
     └── references.md
 ```
 
@@ -73,7 +77,7 @@ Neither method is available yet. Do not attempt installation until a maintainer 
 
 ## Safety and recovery
 
-Experimental firmware can make a phone unusable or erase data. Keep a verified backup and a known-good, device-matched recovery path. Do not test on a device whose data cannot be lost. Use only images built for the exact device variant.
+Experimental firmware can make a phone unusable or erase data. Keep a verified backup and a known-good, device-matched recovery path. Do not test on a device whose data cannot be lost. Use only images built for the exact device variant, and have an experienced adult review any physical-device testing.
 
 ## Legal notice
 
