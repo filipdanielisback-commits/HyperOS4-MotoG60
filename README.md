@@ -53,9 +53,13 @@ Neither method is available yet. Do not attempt installation until a maintainer 
 .
 ├── README.md
 ├── .gitignore
+├── device/motorola/hanoip/README.md
+├── kernel/motorola/sm6150/README.md
+├── vendor/motorola/hanoip/README.md
 └── docs/
+    ├── bring-up-plan.md
     ├── compatibility.md
-    └── bring-up-plan.md
+    └── references.md
 ```
 
 ## Development principles
@@ -79,4 +83,4 @@ This is an unofficial community research project and is not affiliated with Moto
 
 Research notes, reproducible logs, source references, and reviewed device-specific fixes are welcome. Open an issue before submitting large or unverified changes.
 
-See [docs/compatibility.md](docs/compatibility.md) and [docs/bring-up-plan.md](docs/bring-up-plan.md).
+See [docs/compatibility.md](docs/compatibility.md), [docs/bring-up-plan.md](docs/bring-up-plan.md), and [docs/references.md](docs/references.md).
